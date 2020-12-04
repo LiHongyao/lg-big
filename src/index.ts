@@ -186,6 +186,36 @@ class Big {
   public rmb() {
     return Big.rmb(this.v);
   }
+  /**
+   * 切割数字
+   * @param v
+   */
+  public static split(v: string | number) {
+    if (['string', 'number'].indexOf(typeof v) === -1 || isNaN(Number(v))) {
+      return [];
+    } else {
+      return v
+        .toString()
+        .split('.')
+        .map((item, i) => {
+          if (i === 1) {
+            return item && item.length < 2 ? `${item}0` : item;
+          }
+          return item;
+        });
+    }
+  }
+  public split() {
+    return this.v
+      .toString()
+      .split('.')
+      .map((item, i) => {
+        if (i === 1) {
+          return item && item.length < 2 ? `${item}0` : item;
+        }
+        return item;
+      });
+  }
 }
 
 export default Big;
