@@ -20,7 +20,7 @@
 // 除法
 0.3 / 0.1 = 2.9999999999999996
 ```
-这对于数字敏感型项目是非常致命的，目前有很多处理浮点数计算的库，比如 [bigNumber.js](https://github.com/MikeMcl/bignumber.js/)、[big.js](https://github.com/MikeMcl/big.js/)。为了深入理解其处理方式，这里自己写了一个lg-big库便于自己在项目中使用，这里分享给大家。
+这对于数字敏感型项目是非常致命的，目前有很多处理浮点数计算的库，比如 [bigNumber.js](https://github.com/MikeMcl/bignumber.js/)、[big.js](https://github.com/MikeMcl/big.js/)。为了深入理解其处理方式，这里自己写了一个lg-big库便于自己在项目中使用，分享给大家。
 
 # 使用
 
@@ -58,7 +58,7 @@
    console.log(a.dividedBy(b).parse())  // 3
    ```
 
-5. 固定小数点位数
+5. 固定小数点位数，默认2位
 
    ```javascript
    let a = new Big(0.3);
